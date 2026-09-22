@@ -1,0 +1,47 @@
+{
+  "detector": [
+    {
+      "threads": "1",
+      "median_ms": 627.62,
+      "min_ms": 615.3,
+      "max_ms": 696.84
+    },
+    {
+      "threads": "2",
+      "median_ms": 394.02,
+      "min_ms": 356.73,
+      "max_ms": 412.27
+    },
+    {
+      "threads": "4",
+      "median_ms": 273.85,
+      "min_ms": 234.92,
+      "max_ms": 290.6
+    },
+    {
+      "threads": "auto",
+      "median_ms": 212.06,
+      "min_ms": 203.46,
+      "max_ms": 269.06
+    }
+  ],
+  "pipeline": {
+    "threads": 2,
+    "detector_ms": 309.57,
+    "classifier_batch4_ms": 7.37,
+    "model_total_ms": 316.94,
+    "note": "laptop CPU; t3.micro expected 3-5x slower"
+  },
+  "metadata_clean": {
+    "removed_keys": [
+      "description",
+      "author",
+      "date",
+      "version",
+      "license",
+      "docs",
+      "args"
+    ],
+    "description_before": "Ultralytics YOLOv8s-obb model trained on C:\\Users\\ASUS\\Desktop\\Deep Learning\\COVID_YOLO_Project\\dataset_obb\\data.yaml"
+  }
+}

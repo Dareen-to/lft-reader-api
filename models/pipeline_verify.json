@@ -1,0 +1,184 @@
+{
+  "rows": [
+    {
+      "file": "corrupted_01.png",
+      "truth": "no_detection",
+      "new": "no_detection",
+      "old": "no_detection",
+      "ms": 255.4,
+      "source": null,
+      "n_det": 0
+    },
+    {
+      "file": "corrupted_02.png",
+      "truth": "no_detection",
+      "new": "no_detection",
+      "old": "no_detection",
+      "ms": 777.3,
+      "source": null,
+      "n_det": 0
+    },
+    {
+      "file": "corrupted_03.png",
+      "truth": "no_detection",
+      "new": "no_detection",
+      "old": "no_detection",
+      "ms": 535.8,
+      "source": null,
+      "n_det": 0
+    },
+    {
+      "file": "corrupted_04.png",
+      "truth": "no_detection",
+      "new": "no_detection",
+      "old": "no_detection",
+      "ms": 467.7,
+      "source": null,
+      "n_det": 0
+    },
+    {
+      "file": "corrupted_05.png",
+      "truth": "no_detection",
+      "new": "no_detection",
+      "old": "no_detection",
+      "ms": 213.7,
+      "source": null,
+      "n_det": 0
+    },
+    {
+      "file": "invalid_01.png",
+      "truth": "invalid",
+      "new": "negative",
+      "old": "invalid",
+      "ms": 295.9,
+      "source": "cnn+lines agree (negative)",
+      "n_det": 1
+    },
+    {
+      "file": "invalid_02.png",
+      "truth": "invalid",
+      "new": "invalid",
+      "old": "invalid",
+      "ms": 351.7,
+      "source": "cnn (invalid)",
+      "n_det": 1
+    },
+    {
+      "file": "invalid_03.png",
+      "truth": "invalid",
+      "new": "invalid",
+      "old": "invalid",
+      "ms": 282.3,
+      "source": "cnn+lines agree (invalid)",
+      "n_det": 1
+    },
+    {
+      "file": "invalid_04.png",
+      "truth": "invalid",
+      "new": "invalid",
+      "old": "invalid",
+      "ms": 210.3,
+      "source": "cnn+lines agree (invalid)",
+      "n_det": 1
+    },
+    {
+      "file": "invalid_05.png",
+      "truth": "invalid",
+      "new": "invalid",
+      "old": "invalid",
+      "ms": 197.5,
+      "source": "cnn+lines agree (invalid)",
+      "n_det": 1
+    },
+    {
+      "file": "negative_01.jpg",
+      "truth": "negative",
+      "new": "negative",
+      "old": "negative",
+      "ms": 202.9,
+      "source": "cnn+lines agree (negative)",
+      "n_det": 1
+    },
+    {
+      "file": "negative_02.jpg",
+      "truth": "negative",
+      "new": "negative",
+      "old": "negative",
+      "ms": 193.7,
+      "source": "cnn+lines agree (negative)",
+      "n_det": 1
+    },
+    {
+      "file": "negative_03.jpg",
+      "truth": "negative",
+      "new": "negative",
+      "old": "negative",
+      "ms": 212.8,
+      "source": "cnn (negative)",
+      "n_det": 1
+    },
+    {
+      "file": "negative_04.jpg",
+      "truth": "negative",
+      "new": "negative",
+      "old": "negative",
+      "ms": 552.0,
+      "source": "cnn (negative)",
+      "n_det": 1
+    },
+    {
+      "file": "negative_05.jpg",
+      "truth": "negative",
+      "new": "negative",
+      "old": "negative",
+      "ms": 244.1,
+      "source": "cnn+lines agree (negative)",
+      "n_det": 1
+    },
+    {
+      "file": "positive_01.jpg",
+      "truth": "positive",
+      "new": "positive",
+      "old": "positive",
+      "ms": 581.4,
+      "source": "cnn+lines agree (positive)",
+      "n_det": 1
+    },
+    {
+      "file": "positive_02.jpg",
+      "truth": "positive",
+      "new": "positive",
+      "old": "positive",
+      "ms": 592.8,
+      "source": "cnn (positive)",
+      "n_det": 1
+    },
+    {
+      "file": "positive_03.jpg",
+      "truth": "positive",
+      "new": "positive",
+      "old": "positive",
+      "ms": 597.7,
+      "source": "cnn (positive)",
+      "n_det": 1
+    },
+    {
+      "file": "positive_04.jpg",
+      "truth": "positive",
+      "new": "positive",
+      "old": "positive",
+      "ms": 579.9,
+      "source": "cnn (positive)",
+      "n_det": 1
+    },
+    {
+      "file": "positive_05.jpg",
+      "truth": "positive",
+      "new": "positive",
+      "old": "positive",
+      "ms": 596.0,
+      "source": "cnn+lines agree (positive)",
+      "n_det": 1
+    }
+  ]
+}

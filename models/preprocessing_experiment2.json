@@ -1,0 +1,129 @@
+{
+  "dataset": "C:\\Users\\user\\Downloads\\classifier_dataset\\val",
+  "exif": {
+    "with_orientation_tag": 0,
+    "examples": []
+  },
+  "results": {
+    "A   PIL decode  + PIL resize  (control)": {
+      "scored": 81,
+      "skipped": 0,
+      "correct": 78,
+      "accuracy": 0.963,
+      "confusion": [
+        [
+          60,
+          0,
+          0
+        ],
+        [
+          1,
+          14,
+          1
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ]
+    },
+    "E   cv2 decode  + PIL resize": {
+      "scored": 81,
+      "skipped": 0,
+      "correct": 78,
+      "accuracy": 0.963,
+      "confusion": [
+        [
+          60,
+          0,
+          0
+        ],
+        [
+          1,
+          14,
+          1
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ]
+    },
+    "E2  cv2 no-EXIF + PIL resize": {
+      "scored": 81,
+      "skipped": 0,
+      "correct": 78,
+      "accuracy": 0.963,
+      "confusion": [
+        [
+          60,
+          0,
+          0
+        ],
+        [
+          1,
+          14,
+          1
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ]
+    },
+    "D2  4 rot, max-confidence (detect.py rule)": {
+      "scored": 81,
+      "skipped": 0,
+      "correct": 75,
+      "accuracy": 0.9259,
+      "confusion": [
+        [
+          57,
+          3,
+          0
+        ],
+        [
+          1,
+          14,
+          1
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ]
+    },
+    "H   4 rot, mean probability": {
+      "scored": 81,
+      "skipped": 0,
+      "correct": 73,
+      "accuracy": 0.9012,
+      "confusion": [
+        [
+          55,
+          5,
+          0
+        ],
+        [
+          1,
+          14,
+          1
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ]
+    }
+  },
+  "classes": [
+    "positive",
+    "negative",
+    "invalid"
+  ]
+}

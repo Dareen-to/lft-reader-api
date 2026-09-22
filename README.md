@@ -161,7 +161,8 @@ Reproduce with [`preprocessing_experiment.py`](preprocessing_experiment.py) and
 
 ## Known differences from the desktop app
 
-The JavaFX app (`python/detect.py`) and this API are not identical. Three
+The JavaFX app ([`python/detect.py`](https://github.com/Jawlan428/Deep-Learning/blob/main/python/detect.py))
+and this API are not identical. Three
 deliberate divergences, all measured:
 
 1. **PIL resize instead of `cv2.INTER_LINEAR`** — see above. The API is more
@@ -201,6 +202,9 @@ in the API's favour. Stated here rather than omitted.
   not a test strip"; that is what the detection stage is for.
 
 ## Running it
+
+`models/` already contains both exported ONNX graphs, so there is no build or
+export step and no PyTorch install. Clone, install four wheels, run.
 
 ```bash
 # local, no container
@@ -260,4 +264,30 @@ offered over a network, which is what this is — hence the public source.
 
 ---
 
-Built by Dareen Tobassy. Original desktop project: [../README.md](../README.md)
+## About this repository
+
+This is the cloud deployment layer of a two-person Deep Learning course project
+at Kinneret Academic College, extracted into a repository of its own so it can
+be read and run on its own terms.
+
+**What is mine (Dareen Tobassy):** everything in this repository — the ONNX
+export and parity verification, the NumPy reimplementation of Ultralytics' OBB
+decoding and rotated NMS, the inference pipeline, the FastAPI service, the
+container, the Cloud Run deployment, and the preprocessing investigation
+documented above. The three commits in this repository's history are mine, and
+`git log` shows them unchanged.
+
+**What is not:** the two networks were *trained* as part of the joint course
+project. The detector checkpoint (`best.pt`) and the original classifier
+training code are the work of my project partner,
+[Jawlan Ayoub](https://github.com/Jawlan428). The `.onnx` graphs shipped here
+are exported from those trained weights by `export_onnx.py`.
+
+Original project: [Jawlan428/Deep-Learning](https://github.com/Jawlan428/Deep-Learning)
+(this work is on the `cloud-deployment` branch, under `cloud/`).
+
+## Related
+
+[**lft-reader-mcp**](https://github.com/Dareen-to/lft-reader-mcp) — an MCP
+server that exposes this API to AI assistants as two tools, so a model can read
+a lateral flow test from a photo.

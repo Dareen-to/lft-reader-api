@@ -18,25 +18,28 @@ WHY WE DO IT
     real dummy input: the exporter watches the tensor flow through the model.
 
 RUN IT
-    From the project root (Deep-Learning-main), with your venv active:
+    Only needed to REGENERATE the ONNX graphs; models/ already ships with them,
+    so the API runs without ever calling this script. Regenerating needs the
+    PyTorch checkpoints in weights/ (see weights/README.md) and a torch install.
 
-        python cloud/export_onnx.py
+        python export_onnx.py
 
     Optional: point it at a folder of real cassette crops for a stronger check:
 
-        python cloud/export_onnx.py --crops debug_report
+        python export_onnx.py --crops debug_report
 
 OUTPUT
-    cloud/models/detector.onnx      (YOLOv8-OBB)
-    cloud/models/classifier.onnx    (MobileNetV3-Small)
-    cloud/models/classifier_meta.json
-    cloud/models/export_report.json
+    models/detector.onnx      (YOLOv8-OBB)
+    models/classifier.onnx    (MobileNetV3-Small)
+    models/classifier_meta.json
+    models/export_report.json
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import statistics
 import time
@@ -45,15 +48,20 @@ from pathlib import Path
 import numpy as np
 
 # --------------------------------------------------------------------------
-# Paths. Everything cloud-related lives under cloud/ so the existing JavaFX
-# project keeps working exactly as it does today. We do not touch detect.py.
+# Paths.
+#
+# In the original course repo this script lived in cloud/ and reached UP to the
+# project root for the PyTorch checkpoints. In this standalone repo it sits at
+# the root, so the checkpoints are looked for in weights/ instead. Override with
+# DETECTOR_PT / CLASSIFIER_PT if yours live somewhere else.
 # --------------------------------------------------------------------------
 HERE = Path(__file__).resolve().parent
-PROJECT_ROOT = HERE.parent
+PROJECT_ROOT = HERE
 OUT_DIR = HERE / "models"
+WEIGHTS_DIR = HERE / "weights"
 
-DETECTOR_PT = PROJECT_ROOT / "best.pt"
-CLASSIFIER_PT = PROJECT_ROOT / "python" / "classifier_mnv3.pt"
+DETECTOR_PT = Path(os.environ.get("DETECTOR_PT", WEIGHTS_DIR / "best.pt"))
+CLASSIFIER_PT = Path(os.environ.get("CLASSIFIER_PT", WEIGHTS_DIR / "classifier_mnv3.pt"))
 
 DETECTOR_ONNX = OUT_DIR / "detector.onnx"
 CLASSIFIER_ONNX = OUT_DIR / "classifier.onnx"

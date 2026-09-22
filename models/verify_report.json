@@ -1,0 +1,49 @@
+{
+  "part_b": {
+    "n": 81,
+    "pytorch_accuracy": 0.7654,
+    "onnx_accuracy": 0.7654,
+    "agreement": 0.9136,
+    "max_abs_logit_diff": 2.7418136596679688e-05,
+    "pytorch_confusion": [
+      [
+        48,
+        12,
+        0
+      ],
+      [
+        0,
+        13,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "onnx_confusion": [
+      [
+        48,
+        12,
+        0
+      ],
+      [
+        0,
+        13,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "mismatches": [],
+    "classes": [
+      "positive",
+      "negative",
+      "invalid"
+    ]
+  }
+}

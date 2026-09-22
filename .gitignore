@@ -1,0 +1,78 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# IDE / editor (machine-specific; may hold absolute paths)
+.idea/
+*.iml
+.vscode/
+
+# Agent / local tooling (machine-specific)
+.claude/
+
+# Runtime artifacts
+logs/
+temp/
+*.log
+
+# OS noise
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ---------------------------------------------------------------------------
+# SECRETS - never commit these.
+#
+# Git history is permanent. A key removed in a later commit still sits in the
+# history of a public repo, and "I deleted it" is not the same as "it was never
+# published". Assume anything pushed once is compromised forever.
+#
+# If a credential does get committed: ROTATE IT FIRST, then worry about
+# rewriting history. The rotation is what actually protects you.
+# ---------------------------------------------------------------------------
+.env
+.env.*
+*.env
+!.env.example
+
+# Cloud credentials
+*service-account*.json
+*service_account*.json
+gcp-key*.json
+gcloud-key*.json
+application_default_credentials.json
+.gcloud/
+credentials.json
+client_secret*.json
+
+# Generic keys and certificates
+*.key
+*.p12
+*.pfx
+id_rsa
+id_rsa.*
+*.crt
+
+# ---------------------------------------------------------------------------
+# Model files
+#
+# Unlike the parent training repo, the .onnx graphs ARE tracked here: this is a
+# deployment repo, and they are what the service actually loads. Shipping them
+# is what lets `pip install -r requirements.txt && uvicorn main:app` work from a
+# fresh clone without PyTorch or a training run.
+#
+# The PyTorch checkpoints they were exported from are NOT tracked - see
+# weights/README.md.
+# ---------------------------------------------------------------------------
+weights/*.pt
+models/verify_output.txt
+
+# Datasets live outside the repo (see the CLASSIFIER_DATASET env var)
+classifier_dataset/
+dataset_obb/
+new_photos/

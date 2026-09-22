@@ -1,0 +1,604 @@
+{
+  "rows": [
+    {
+      "file": "corrupted_01.png",
+      "n_a": 0,
+      "n_b": 0,
+      "n_c": 0,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 0,
+        "count_b": 0,
+        "count_match": true,
+        "matched": 0,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": null,
+        "mean_iou": null,
+        "max_conf_delta": null
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 0,
+        "count_b": 0,
+        "count_match": true,
+        "matched": 0,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": null,
+        "mean_iou": null,
+        "max_conf_delta": null
+      }
+    },
+    {
+      "file": "corrupted_02.png",
+      "n_a": 0,
+      "n_b": 0,
+      "n_c": 0,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 0,
+        "count_b": 0,
+        "count_match": true,
+        "matched": 0,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": null,
+        "mean_iou": null,
+        "max_conf_delta": null
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 0,
+        "count_b": 0,
+        "count_match": true,
+        "matched": 0,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": null,
+        "mean_iou": null,
+        "max_conf_delta": null
+      }
+    },
+    {
+      "file": "corrupted_03.png",
+      "n_a": 0,
+      "n_b": 0,
+      "n_c": 0,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 0,
+        "count_b": 0,
+        "count_match": true,
+        "matched": 0,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": null,
+        "mean_iou": null,
+        "max_conf_delta": null
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 0,
+        "count_b": 0,
+        "count_match": true,
+        "matched": 0,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": null,
+        "mean_iou": null,
+        "max_conf_delta": null
+      }
+    },
+    {
+      "file": "corrupted_04.png",
+      "n_a": 0,
+      "n_b": 0,
+      "n_c": 0,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 0,
+        "count_b": 0,
+        "count_match": true,
+        "matched": 0,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": null,
+        "mean_iou": null,
+        "max_conf_delta": null
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 0,
+        "count_b": 0,
+        "count_match": true,
+        "matched": 0,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": null,
+        "mean_iou": null,
+        "max_conf_delta": null
+      }
+    },
+    {
+      "file": "corrupted_05.png",
+      "n_a": 0,
+      "n_b": 0,
+      "n_c": 0,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 0,
+        "count_b": 0,
+        "count_match": true,
+        "matched": 0,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": null,
+        "mean_iou": null,
+        "max_conf_delta": null
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 0,
+        "count_b": 0,
+        "count_match": true,
+        "matched": 0,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": null,
+        "mean_iou": null,
+        "max_conf_delta": null
+      }
+    },
+    {
+      "file": "invalid_01.png",
+      "n_a": 1,
+      "n_b": 1,
+      "n_c": 1,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9999998076086447,
+        "mean_iou": 0.9999998076086447,
+        "max_conf_delta": 0.0
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9974919236691577,
+        "mean_iou": 0.9974919236691577,
+        "max_conf_delta": 0.00021713972091674805
+      }
+    },
+    {
+      "file": "invalid_02.png",
+      "n_a": 1,
+      "n_b": 1,
+      "n_c": 1,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.999999703418008,
+        "mean_iou": 0.999999703418008,
+        "max_conf_delta": 0.0
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9130553761299475,
+        "mean_iou": 0.9130553761299475,
+        "max_conf_delta": 0.0012547969818115234
+      }
+    },
+    {
+      "file": "invalid_03.png",
+      "n_a": 1,
+      "n_b": 1,
+      "n_c": 1,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.999999742674527,
+        "mean_iou": 0.999999742674527,
+        "max_conf_delta": 0.0
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9624333970565724,
+        "mean_iou": 0.9624333970565724,
+        "max_conf_delta": 0.03548496961593628
+      }
+    },
+    {
+      "file": "invalid_04.png",
+      "n_a": 1,
+      "n_b": 1,
+      "n_c": 1,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9999995954973748,
+        "mean_iou": 0.9999995954973748,
+        "max_conf_delta": 0.0
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.8440214482130061,
+        "mean_iou": 0.8440214482130061,
+        "max_conf_delta": 0.03785693645477295
+      }
+    },
+    {
+      "file": "invalid_05.png",
+      "n_a": 1,
+      "n_b": 1,
+      "n_c": 1,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9999996593432763,
+        "mean_iou": 0.9999996593432763,
+        "max_conf_delta": 0.0
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9806585845091813,
+        "mean_iou": 0.9806585845091813,
+        "max_conf_delta": 1.3768672943115234e-05
+      }
+    },
+    {
+      "file": "negative_01.jpg",
+      "n_a": 1,
+      "n_b": 1,
+      "n_c": 1,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.999999642024282,
+        "mean_iou": 0.999999642024282,
+        "max_conf_delta": 0.0
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9922329338540987,
+        "mean_iou": 0.9922329338540987,
+        "max_conf_delta": 0.0013436675071716309
+      }
+    },
+    {
+      "file": "negative_02.jpg",
+      "n_a": 1,
+      "n_b": 1,
+      "n_c": 1,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9999996008757146,
+        "mean_iou": 0.9999996008757146,
+        "max_conf_delta": 0.0
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9970252686289874,
+        "mean_iou": 0.9970252686289874,
+        "max_conf_delta": 0.00035881996154785156
+      }
+    },
+    {
+      "file": "negative_03.jpg",
+      "n_a": 1,
+      "n_b": 1,
+      "n_c": 1,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9999998250960187,
+        "mean_iou": 0.9999998250960187,
+        "max_conf_delta": 0.0
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9911960823646726,
+        "mean_iou": 0.9911960823646726,
+        "max_conf_delta": 0.0032356977462768555
+      }
+    },
+    {
+      "file": "negative_04.jpg",
+      "n_a": 1,
+      "n_b": 1,
+      "n_c": 1,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9999992587370157,
+        "mean_iou": 0.9999992587370157,
+        "max_conf_delta": 0.0
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9372334179107062,
+        "mean_iou": 0.9372334179107062,
+        "max_conf_delta": 0.0008047819137573242
+      }
+    },
+    {
+      "file": "negative_05.jpg",
+      "n_a": 1,
+      "n_b": 1,
+      "n_c": 1,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9999994489268157,
+        "mean_iou": 0.9999994489268157,
+        "max_conf_delta": 0.0
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.991789134124166,
+        "mean_iou": 0.991789134124166,
+        "max_conf_delta": 0.002794206142425537
+      }
+    },
+    {
+      "file": "positive_01.jpg",
+      "n_a": 1,
+      "n_b": 1,
+      "n_c": 1,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9999994384403361,
+        "mean_iou": 0.9999994384403361,
+        "max_conf_delta": 0.0
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9946311544190637,
+        "mean_iou": 0.9946311544190637,
+        "max_conf_delta": 0.00279313325881958
+      }
+    },
+    {
+      "file": "positive_02.jpg",
+      "n_a": 1,
+      "n_b": 1,
+      "n_c": 1,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9999996010259892,
+        "mean_iou": 0.9999996010259892,
+        "max_conf_delta": 0.0
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9895749809459059,
+        "mean_iou": 0.9895749809459059,
+        "max_conf_delta": 0.022701621055603027
+      }
+    },
+    {
+      "file": "positive_03.jpg",
+      "n_a": 1,
+      "n_b": 1,
+      "n_c": 1,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9999995512766947,
+        "mean_iou": 0.9999995512766947,
+        "max_conf_delta": 0.0
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9431860643773716,
+        "mean_iou": 0.9431860643773716,
+        "max_conf_delta": 0.004558384418487549
+      }
+    },
+    {
+      "file": "positive_04.jpg",
+      "n_a": 1,
+      "n_b": 1,
+      "n_c": 1,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9999995332821161,
+        "mean_iou": 0.9999995332821161,
+        "max_conf_delta": 0.0
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9876378255534279,
+        "mean_iou": 0.9876378255534279,
+        "max_conf_delta": 0.002551555633544922
+      }
+    },
+    {
+      "file": "positive_05.jpg",
+      "n_a": 1,
+      "n_b": 1,
+      "n_c": 1,
+      "bc": {
+        "pair": "B vs C",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.999999099003916,
+        "mean_iou": 0.999999099003916,
+        "max_conf_delta": 0.0
+      },
+      "ab": {
+        "pair": "A vs B",
+        "count_a": 1,
+        "count_b": 1,
+        "count_match": true,
+        "matched": 1,
+        "unmatched_a": 0,
+        "unmatched_b": 0,
+        "min_iou": 0.9524078591238677,
+        "mean_iou": 0.9524078591238677,
+        "max_conf_delta": 0.002386629581451416
+      }
+    }
+  ]
+}

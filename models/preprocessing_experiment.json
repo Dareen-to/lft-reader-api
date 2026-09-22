@@ -1,0 +1,102 @@
+{
+  "dataset": "C:\\Users\\user\\Downloads\\classifier_dataset\\val",
+  "results": {
+    "A  PIL + torchvision (training-time)": {
+      "scored": 81,
+      "skipped": 0,
+      "correct": 78,
+      "accuracy": 0.963,
+      "confusion": [
+        [
+          60,
+          0,
+          0
+        ],
+        [
+          1,
+          14,
+          1
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ]
+    },
+    "B  cv2 INTER_LINEAR (detect.py today)": {
+      "scored": 81,
+      "skipped": 0,
+      "correct": 68,
+      "accuracy": 0.8395,
+      "confusion": [
+        [
+          48,
+          12,
+          0
+        ],
+        [
+          0,
+          16,
+          0
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ]
+    },
+    "C  cv2 INTER_AREA (candidate fix)": {
+      "scored": 81,
+      "skipped": 0,
+      "correct": 76,
+      "accuracy": 0.9383,
+      "confusion": [
+        [
+          59,
+          1,
+          0
+        ],
+        [
+          1,
+          13,
+          2
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ]
+    },
+    "D  cv2 INTER_AREA + 4 rotations": {
+      "scored": 81,
+      "skipped": 0,
+      "correct": 72,
+      "accuracy": 0.8889,
+      "confusion": [
+        [
+          56,
+          3,
+          1
+        ],
+        [
+          1,
+          11,
+          4
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ]
+    }
+  },
+  "classes": [
+    "positive",
+    "negative",
+    "invalid"
+  ]
+}
