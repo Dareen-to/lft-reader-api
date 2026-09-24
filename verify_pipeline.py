@@ -51,6 +51,7 @@ import subprocess
 import sys
 import tempfile
 import time
+import os
 from pathlib import Path
 
 import numpy as np
@@ -58,10 +59,11 @@ import numpy as np
 import pipeline as pl
 
 HERE = Path(__file__).resolve().parent
-PROJECT_ROOT = HERE.parent
+PROJECT_ROOT = HERE          # standalone repo: scripts sit at the root
+WEIGHTS_DIR = HERE / "weights"   # PyTorch checkpoints (see weights/README.md)
 MODEL_DIR = HERE / "models"
 DETECT_PY = PROJECT_ROOT / "python" / "detect.py"
-DETECTOR_PT = PROJECT_ROOT / "best.pt"
+DETECTOR_PT = Path(os.environ.get("DETECTOR_PT", WEIGHTS_DIR / "best.pt"))
 REPORT = MODEL_DIR / "pipeline_verify.json"
 
 IMG_EXT = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}

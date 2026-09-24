@@ -196,6 +196,19 @@ def export_detector() -> None:
 
     imgsz=640 is pinned to match detect.py's model.predict(imgsz=640). Export at
     a different size and the detector silently degrades on real photos.
+
+    WHY dynamic=True
+        A fixed 640x640 input forces the letterbox to pad every photo out to a
+        full square. Ultralytics pads only to the next multiple of 32, so a 4:3
+        photo goes in at 640x480 and keeps resolution the square version spends
+        on grey. That difference was the one measured disagreement between this
+        API and the desktop app: mean polygon IoU 0.965, worst 0.844, and one
+        demo image whose verdict flipped.
+
+        Dynamic axes cost a little CPU — the graph can no longer bake in every
+        shape — but the decode head still emits cx, cy, w, h in input-pixel
+        space, and obb_postprocess reads the candidate count off the tensor, so
+        nothing downstream changes. bench_detector.py measures the cost.
     """
     from ultralytics import YOLO
 
@@ -204,9 +217,9 @@ def export_detector() -> None:
         format="onnx",
         imgsz=DETECT_IMGSZ,
         opset=OPSET,
-        dynamic=False,   # fixed 640x640 input: simpler graph, faster on CPU
+        dynamic=True,    # dynamic H/W: lets inference pad to a stride multiple
         simplify=True,   # fuses redundant nodes
-        half=False,      # float16 needs a GPU; t3.micro is CPU-only
+        half=False,      # float16 needs a GPU; Cloud Run is CPU-only
     )
 
     produced = Path(produced)

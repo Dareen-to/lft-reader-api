@@ -51,7 +51,8 @@ import numpy as np
 import obb_postprocess as pp
 
 HERE = Path(__file__).resolve().parent
-PROJECT_ROOT = HERE.parent
+PROJECT_ROOT = HERE          # standalone repo: scripts sit at the root
+WEIGHTS_DIR = HERE / "weights"   # PyTorch checkpoints (see weights/README.md)
 OUT_DIR = HERE / "models"
 DETECTOR_ONNX = OUT_DIR / "detector.onnx"
 

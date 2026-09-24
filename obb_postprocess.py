@@ -44,25 +44,39 @@ IMGSZ = 640
 CONF_THRESHOLD = 0.4
 IOU_THRESHOLD = 0.5
 PAD_COLOR = (114, 114, 114)   # Ultralytics' letterbox grey
+STRIDE = 32                   # the detector's largest stride
+
+# Pad to the next multiple of STRIDE instead of to a full square.
+#
+# This is only legal because detector.onnx is now exported with dynamic height
+# and width axes. With the old fixed 640x640 graph the input had to be square,
+# which is what the "known differences" section of the README used to describe.
+# Set to False to reproduce the old square-padding behaviour.
+AUTO_PAD = True
 
 
 # ==========================================================================
 # 1. PREPROCESSING — letterbox
 # ==========================================================================
-def letterbox(img_bgr: np.ndarray, size: int = IMGSZ):
-    """Resize preserving aspect ratio, then pad to a `size` x `size` square.
+def letterbox(img_bgr: np.ndarray, size: int = IMGSZ, auto: bool = AUTO_PAD):
+    """Resize preserving aspect ratio, then pad to a stride-aligned rectangle.
 
     Why not just cv2.resize to 640x640? Because that stretches the image.
     A cassette photographed in portrait would be squashed horizontally, and
     the detector was trained on correctly-proportioned objects. Letterboxing
     scales by a single factor and fills the leftover space with grey.
 
-    NOTE ON A REAL DIFFERENCE FROM THE DESKTOP APP
-        Ultralytics' predict() on a single PyTorch model uses `auto=True`,
-        which pads only to the next multiple of 32 — so a 4:3 photo becomes
-        640x480, not 640x640. Our ONNX graph is frozen at 640x640, so we must
-        pad to the full square. The extra grey padding is a genuine difference
-        between the two paths. verify_obb.py measures whether it matters.
+    HOW MUCH GREY, THOUGH
+        Ultralytics' predict() on a single PyTorch model uses `auto=True`: it
+        pads only to the next multiple of 32, so a 4:3 photo becomes 640x480,
+        not 640x640. We now do the same (`auto=True` here), which is possible
+        because the ONNX graph accepts dynamic height and width.
+
+        The old exported graph was frozen at 640x640, forcing a full square and
+        up to 25% of the input to be grey. That cost real detector resolution
+        and was the one measured place where this API disagreed with the
+        desktop app. `auto=False` restores the old behaviour for comparison;
+        verify_obb.py measures both against Ultralytics.
 
     Returns (padded_image, scale_ratio, (pad_x, pad_y)).
     """
@@ -74,8 +88,15 @@ def letterbox(img_bgr: np.ndarray, size: int = IMGSZ):
     new_w, new_h = int(round(w0 * r)), int(round(h0 * r))
     resized = cv2.resize(img_bgr, (new_w, new_h), interpolation=cv2.INTER_LINEAR)
 
+    # How much padding is needed to reach the target canvas.
+    pad_w, pad_h = size - new_w, size - new_h
+    if auto:
+        # Only enough to reach the next multiple of the stride. A 640x480
+        # image needs none at all; 640x481 needs 31 rows.
+        pad_w, pad_h = pad_w % STRIDE, pad_h % STRIDE
+
     # Centre the image; split the leftover space evenly on both sides.
-    dw, dh = (size - new_w) / 2, (size - new_h) / 2
+    dw, dh = pad_w / 2, pad_h / 2
     top, bottom = int(round(dh - 0.1)), int(round(dh + 0.1))
     left, right = int(round(dw - 0.1)), int(round(dw + 0.1))
 
@@ -97,16 +118,21 @@ def letterbox(img_bgr: np.ndarray, size: int = IMGSZ):
     return padded, r, (float(left), float(top))
 
 
-def preprocess(img_bgr: np.ndarray, size: int = IMGSZ):
+def preprocess(img_bgr: np.ndarray, size: int = IMGSZ, auto: bool = AUTO_PAD):
     """Full detector input prep: letterbox -> RGB -> 0..1 -> NCHW float32.
 
     YOLO does NOT use ImageNet mean/std normalization — just a divide by 255.
     Applying mean/std here (a natural assumption if you have come from
     torchvision) would quietly wreck the detections.
+
+    With auto padding the returned tensor is no longer a fixed 640x640 — the
+    detector session must have been built from a dynamic-axis export. Nothing
+    downstream cares: postprocess() reads the candidate count off the tensor
+    it is handed rather than assuming 8400.
     """
     import cv2
 
-    padded, r, pad = letterbox(img_bgr, size)
+    padded, r, pad = letterbox(img_bgr, size, auto)
     rgb = cv2.cvtColor(padded, cv2.COLOR_BGR2RGB)
     arr = rgb.astype(np.float32) / 255.0
     return arr.transpose(2, 0, 1)[None, ...], r, pad

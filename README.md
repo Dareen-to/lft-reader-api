@@ -162,8 +162,10 @@ Reproduce with [`preprocessing_experiment.py`](preprocessing_experiment.py) and
 ## Known differences from the desktop app
 
 The JavaFX app ([`python/detect.py`](https://github.com/Jawlan428/Deep-Learning/blob/main/python/detect.py))
-and this API are not identical. Three
-deliberate divergences, all measured:
+and this API are not identical. Two
+deliberate divergences remain, both measured. A third — square letterboxing —
+was closed on 24 September 2026 and is written up under
+[Closing the letterbox gap](#closing-the-letterbox-gap) below.
 
 1. **PIL resize instead of `cv2.INTER_LINEAR`** — see above. The API is more
    accurate. `detect.py` still has the original behaviour.
@@ -173,22 +175,52 @@ deliberate divergences, all measured:
    rotations are out-of-distribution and produce confidently wrong answers.
    *Caveat: the held-out set contains only upright crops, so it cannot test the
    near-square-OBB case the rotation was written for.*
-3. **Square letterboxing.** The fixed 640×640 ONNX input requires padding to a
-   full square; Ultralytics pads to the nearest multiple of 32. Detection boxes
-   differ slightly — mean polygon IoU 0.965, worst 0.844.
+## Closing the letterbox gap
 
-   **This can change a verdict.** On the demo set, `invalid_01.png` reads as
-   `invalid` through the desktop pipeline and `negative` through this API. By
-   that point both use identical preprocessing and an identical classifier, so
-   the crop geometry is the only thing left that differs.
+This section used to describe a third divergence and say it had not been fixed.
+It has been.
 
-   Closing it would mean re-exporting the detector with a dynamic input shape
-   and re-verifying. That has not been done.
+**The problem.** The detector was exported with `dynamic=False`, freezing the
+ONNX input at 640×640. A portrait photo therefore had to be padded out to a full
+square — up to a quarter of the tensor was grey — while Ultralytics pads only to
+the next multiple of 32 and sends 640×448. Same weights, different framing, so
+the boxes came out slightly different. On a borderline crop that is enough to
+change a verdict.
 
-End-to-end on the 20-image demo set, once the same resize fix was applied to
-`detect.py`: **desktop 20/20, this API 19/20.** One borderline flip on twenty
-images is weak evidence either way — but it is a real difference, and it is not
-in the API's favour. Stated here rather than omitted.
+**The fix.** Two lines, really: export with `dynamic=True`, and letterbox to a
+stride multiple instead of a square (`AUTO_PAD` in
+[`obb_postprocess.py`](obb_postprocess.py)). The NumPy postprocessing needed no
+change at all — it reads the candidate count off the tensor rather than assuming
+8400, so 5880 anchors work as well as 8400.
+
+**Measured**, by [`verify_obb.py`](verify_obb.py) over 20 photos held out from
+the source dataset, comparing this pipeline against PyTorch + Ultralytics:
+
+| | Before (fixed square) | After (dynamic + stride) |
+|---|---|---|
+| Mean polygon IoU vs Ultralytics | 0.98333 | **1.00000** |
+| Worst polygon IoU | 0.94319 | **1.00000** |
+| Worst confidence difference | 0.02270 | **0.00000** |
+| Detections agreeing | 20/20 | 20/20 |
+| Median `detect()` end-to-end | 140.5 ms | **63.6 ms** |
+
+The geometry difference is gone: the API and the desktop app now produce the
+same boxes, not merely similar ones.
+
+**The speedup was not the point but is the larger effect.** A 1024×1536 photo
+goes in at 640×448 instead of 640×640, which is 30% fewer pixels and 5880
+candidate positions instead of 8400. Padding less is faster than padding more —
+obvious in hindsight, and it more than doubled detector throughput.
+
+**Not yet re-checked:** `invalid_01.png` on the original demo set, which used to
+read `invalid` on the desktop and `negative` here. Crop geometry was the only
+remaining difference and it is now identical, so the cause is removed — but that
+specific image has not been re-run, and "the cause is gone" is not the same as
+"the symptom is gone".
+
+> Earlier figures of mean IoU 0.965 / worst 0.844 came from a different image
+> set than the 20 used above, so the before-and-after numbers in the table are
+> the like-for-like pair.
 
 ## Known limitations
 

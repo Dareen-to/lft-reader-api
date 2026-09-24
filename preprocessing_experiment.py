@@ -60,14 +60,16 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from pathlib import Path
 
 import numpy as np
 
 HERE = Path(__file__).resolve().parent
-PROJECT_ROOT = HERE.parent
+PROJECT_ROOT = HERE          # standalone repo: scripts sit at the root
+WEIGHTS_DIR = HERE / "weights"   # PyTorch checkpoints (see weights/README.md)
 OUT_DIR = HERE / "models"
-CLASSIFIER_PT = PROJECT_ROOT / "python" / "classifier_mnv3.pt"
+CLASSIFIER_PT = Path(os.environ.get("CLASSIFIER_PT", WEIGHTS_DIR / "classifier_mnv3.pt"))
 META_JSON = OUT_DIR / "classifier_meta.json"
 REPORT = OUT_DIR / "preprocessing_experiment.json"
 
