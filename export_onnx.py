@@ -438,13 +438,40 @@ def main() -> None:
                          "(relative to project root). Default: debug_report")
     ap.add_argument("--skip-detector", action="store_true",
                     help="Only do the classifier (faster while iterating).")
+    ap.add_argument("--detector-only", action="store_true",
+                    help="Only do the detector. This is the useful one in this "
+                         "repo: classifier_mnv3.pt was never committed anywhere "
+                         "(see weights/README.md), so the classifier half cannot "
+                         "run from a clean clone.")
     args = ap.parse_args()
 
-    for p in (DETECTOR_PT, CLASSIFIER_PT):
-        if not p.exists():
-            raise SystemExit(f"Model not found: {p}")
+    # Check only what this run actually needs. The old version demanded BOTH
+    # checkpoints up front, which meant the script could not run at all in a
+    # clone without classifier_mnv3.pt — including when all you wanted was to
+    # re-export the detector.
+    want_classifier = not args.detector_only
+    want_detector = not args.skip_detector
+
+    if want_detector and not DETECTOR_PT.exists():
+        raise SystemExit(f"Detector checkpoint not found: {DETECTOR_PT}\n"
+                         f"See weights/README.md for where to get it.")
+    if want_classifier and not CLASSIFIER_PT.exists():
+        raise SystemExit(f"Classifier checkpoint not found: {CLASSIFIER_PT}\n"
+                         f"It was never committed to the original repo; only the\n"
+                         f"exported classifier.onnx survives (see weights/README.md).\n"
+                         f"To re-export just the detector:  "
+                         f"python export_onnx.py --detector-only")
 
     report: dict = {"opset": OPSET, "detect_imgsz": DETECT_IMGSZ}
+
+    if args.detector_only:
+        section("Detector only")
+        export_detector()
+        log("\n  Detector re-exported. The classifier steps were skipped, so no\n"
+            "  export_report.json was written — that report is about the\n"
+            "  classifier's PyTorch-vs-ONNX parity.")
+        log("\n  Next: verify_obb.py compares the detector against Ultralytics.")
+        return
 
     section("STEP 1/4  Rebuild MobileNetV3-Small from the checkpoint")
     model, meta = load_classifier_from_checkpoint()

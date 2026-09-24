@@ -13,8 +13,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.99999933910631,
-        "mean_iou": 0.99999933910631,
+        "min_iou": 0.9999995146893845,
+        "mean_iou": 0.9999995146893845,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -25,9 +25,9 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9853033970084931,
-        "mean_iou": 0.9853033970084931,
-        "max_conf_delta": 0.006045043468475342
+        "min_iou": 0.9999990331868869,
+        "mean_iou": 0.9999990331868869,
+        "max_conf_delta": 1.7881393432617188e-07
       }
     },
     {
@@ -43,8 +43,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9999994603528213,
-        "mean_iou": 0.9999994603528213,
+        "min_iou": 0.9999998899918966,
+        "mean_iou": 0.9999998899918966,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -55,9 +55,9 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9902300472056134,
-        "mean_iou": 0.9902300472056134,
-        "max_conf_delta": 0.004476606845855713
+        "min_iou": 0.9999992595273492,
+        "mean_iou": 0.9999992595273492,
+        "max_conf_delta": 5.960464477539063e-08
       }
     },
     {
@@ -73,8 +73,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9999999991332261,
-        "mean_iou": 0.9999999991332261,
+        "min_iou": 0.999999193683781,
+        "mean_iou": 0.999999193683781,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -85,9 +85,9 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9849470599468726,
-        "mean_iou": 0.9849470599468726,
-        "max_conf_delta": 0.014156877994537354
+        "min_iou": 0.9999998419463425,
+        "mean_iou": 0.9999998419463425,
+        "max_conf_delta": 5.960464477539063e-08
       }
     },
     {
@@ -103,8 +103,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9999991588107257,
-        "mean_iou": 0.9999991588107257,
+        "min_iou": 0.9999994849433484,
+        "mean_iou": 0.9999994849433484,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -115,9 +115,9 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9805251060408166,
-        "mean_iou": 0.9805251060408166,
-        "max_conf_delta": 0.0052751898765563965
+        "min_iou": 0.9999996827414711,
+        "mean_iou": 0.9999996827414711,
+        "max_conf_delta": 1.1920928955078125e-07
       }
     },
     {
@@ -133,8 +133,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9999994603528213,
-        "mean_iou": 0.9999994603528213,
+        "min_iou": 0.9999998899918966,
+        "mean_iou": 0.9999998899918966,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -145,9 +145,9 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9902300472056134,
-        "mean_iou": 0.9902300472056134,
-        "max_conf_delta": 0.004476606845855713
+        "min_iou": 0.9999992595273492,
+        "mean_iou": 0.9999992595273492,
+        "max_conf_delta": 5.960464477539063e-08
       }
     },
     {
@@ -163,8 +163,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.99999933910631,
-        "mean_iou": 0.99999933910631,
+        "min_iou": 0.9999995146893845,
+        "mean_iou": 0.9999995146893845,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -175,9 +175,9 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9853033970084931,
-        "mean_iou": 0.9853033970084931,
-        "max_conf_delta": 0.006045043468475342
+        "min_iou": 0.9999990331868869,
+        "mean_iou": 0.9999990331868869,
+        "max_conf_delta": 1.7881393432617188e-07
       }
     },
     {
@@ -193,8 +193,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9999995534578372,
-        "mean_iou": 0.9999995534578372,
+        "min_iou": 0.9999995526613347,
+        "mean_iou": 0.9999995526613347,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -205,9 +205,9 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9876965795342401,
-        "mean_iou": 0.9876965795342401,
-        "max_conf_delta": 0.0089339017868042
+        "min_iou": 0.9999997392456877,
+        "mean_iou": 0.9999997392456877,
+        "max_conf_delta": 1.1920928955078125e-07
       }
     },
     {
@@ -223,8 +223,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9999988716577026,
-        "mean_iou": 0.9999988716577026,
+        "min_iou": 0.9999992814312452,
+        "mean_iou": 0.9999992814312452,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -235,13 +235,13 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9879909477205977,
-        "mean_iou": 0.9879909477205977,
-        "max_conf_delta": 0.0030788779258728027
+        "min_iou": 0.9999993267335813,
+        "mean_iou": 0.9999993267335813,
+        "max_conf_delta": 1.7881393432617188e-07
       }
     },
     {
-      "file": "100P.jpg",
+      "file": "1646601843912.jpg",
       "n_a": 1,
       "n_b": 1,
       "n_c": 1,
@@ -253,8 +253,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9999996123623534,
-        "mean_iou": 0.9999996123623534,
+        "min_iou": 0.9999996919724903,
+        "mean_iou": 0.9999996919724903,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -265,13 +265,13 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9946303510912134,
-        "mean_iou": 0.9946303510912134,
-        "max_conf_delta": 0.00279313325881958
+        "min_iou": 0.9999996901728047,
+        "mean_iou": 0.9999996901728047,
+        "max_conf_delta": 1.1920928955078125e-07
       }
     },
     {
-      "file": "1646476113867.jpg",
+      "file": "1646601843934.jpg",
       "n_a": 1,
       "n_b": 1,
       "n_c": 1,
@@ -283,8 +283,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9999996895602884,
-        "mean_iou": 0.9999996895602884,
+        "min_iou": 0.9999998727440527,
+        "mean_iou": 0.9999998727440527,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -295,13 +295,13 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9895747841360911,
-        "mean_iou": 0.9895747841360911,
-        "max_conf_delta": 0.022701561450958252
+        "min_iou": 0.9999995684826123,
+        "mean_iou": 0.9999995684826123,
+        "max_conf_delta": 2.384185791015625e-07
       }
     },
     {
-      "file": "1646476113873.jpg",
+      "file": "1646601843954.jpg",
       "n_a": 1,
       "n_b": 1,
       "n_c": 1,
@@ -313,8 +313,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9999996304749771,
-        "mean_iou": 0.9999996304749771,
+        "min_iou": 0.9999997071600484,
+        "mean_iou": 0.9999997071600484,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -325,13 +325,13 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9431861867753446,
-        "mean_iou": 0.9431861867753446,
-        "max_conf_delta": 0.00455862283706665
+        "min_iou": 0.9999992739789705,
+        "mean_iou": 0.9999992739789705,
+        "max_conf_delta": 5.960464477539063e-08
       }
     },
     {
-      "file": "1646476113881.jpg",
+      "file": "1646601843972.jpg",
       "n_a": 1,
       "n_b": 1,
       "n_c": 1,
@@ -343,8 +343,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9999993736337955,
-        "mean_iou": 0.9999993736337955,
+        "min_iou": 0.9999996323615519,
+        "mean_iou": 0.9999996323615519,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -355,13 +355,13 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9876377265810118,
-        "mean_iou": 0.9876377265810118,
-        "max_conf_delta": 0.0025513768196105957
+        "min_iou": 0.999999503421128,
+        "mean_iou": 0.999999503421128,
+        "max_conf_delta": 5.960464477539063e-08
       }
     },
     {
-      "file": "1646476113889.jpg",
+      "file": "1646601843989.jpg",
       "n_a": 1,
       "n_b": 1,
       "n_c": 1,
@@ -373,8 +373,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9999994698606611,
-        "mean_iou": 0.9999994698606611,
+        "min_iou": 0.999999832469648,
+        "mean_iou": 0.999999832469648,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -385,13 +385,13 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9524075090477574,
-        "mean_iou": 0.9524075090477574,
-        "max_conf_delta": 0.0023868680000305176
+        "min_iou": 0.9999992047519886,
+        "mean_iou": 0.9999992047519886,
+        "max_conf_delta": 1.7881393432617188e-07
       }
     },
     {
-      "file": "1646476113899.jpg",
+      "file": "1646601844006.jpg",
       "n_a": 1,
       "n_b": 1,
       "n_c": 1,
@@ -403,8 +403,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9999996032810082,
-        "mean_iou": 0.9999996032810082,
+        "min_iou": 0.9999995707119381,
+        "mean_iou": 0.9999995707119381,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -415,13 +415,13 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9934134222643759,
-        "mean_iou": 0.9934134222643759,
-        "max_conf_delta": 0.003721296787261963
+        "min_iou": 0.9999997879319225,
+        "mean_iou": 0.9999997879319225,
+        "max_conf_delta": 0.0
       }
     },
     {
-      "file": "1646476113914.jpg",
+      "file": "1646601844022.jpg",
       "n_a": 1,
       "n_b": 1,
       "n_c": 1,
@@ -433,8 +433,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.999999525527218,
-        "mean_iou": 0.999999525527218,
+        "min_iou": 0.9999994897976349,
+        "mean_iou": 0.9999994897976349,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -445,13 +445,13 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9801016629098749,
-        "mean_iou": 0.9801016629098749,
-        "max_conf_delta": 0.005340993404388428
+        "min_iou": 0.9999998309550439,
+        "mean_iou": 0.9999998309550439,
+        "max_conf_delta": 2.384185791015625e-07
       }
     },
     {
-      "file": "1646476113925.jpg",
+      "file": "1646601844037.jpg",
       "n_a": 1,
       "n_b": 1,
       "n_c": 1,
@@ -463,8 +463,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9999995300744174,
-        "mean_iou": 0.9999995300744174,
+        "min_iou": 0.9999996874436283,
+        "mean_iou": 0.9999996874436283,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -475,13 +475,13 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9939221770144733,
-        "mean_iou": 0.9939221770144733,
-        "max_conf_delta": 0.0019021034240722656
+        "min_iou": 0.999998795176627,
+        "mean_iou": 0.999998795176627,
+        "max_conf_delta": 3.5762786865234375e-07
       }
     },
     {
-      "file": "1646476113935.jpg",
+      "file": "1646601844081.jpg",
       "n_a": 1,
       "n_b": 1,
       "n_c": 1,
@@ -493,8 +493,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9999996857682281,
-        "mean_iou": 0.9999996857682281,
+        "min_iou": 0.9999994828998424,
+        "mean_iou": 0.9999994828998424,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -505,13 +505,13 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9723924878634067,
-        "mean_iou": 0.9723924878634067,
-        "max_conf_delta": 0.001117706298828125
+        "min_iou": 0.9999992669120219,
+        "mean_iou": 0.9999992669120219,
+        "max_conf_delta": 1.1920928955078125e-07
       }
     },
     {
-      "file": "1646476113946.jpg",
+      "file": "1646601844098.jpg",
       "n_a": 1,
       "n_b": 1,
       "n_c": 1,
@@ -523,8 +523,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9999991181372876,
-        "mean_iou": 0.9999991181372876,
+        "min_iou": 0.9999998103298631,
+        "mean_iou": 0.9999998103298631,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -535,13 +535,13 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9915217243596923,
-        "mean_iou": 0.9915217243596923,
-        "max_conf_delta": 0.004456698894500732
+        "min_iou": 0.999999727507508,
+        "mean_iou": 0.999999727507508,
+        "max_conf_delta": 1.7881393432617188e-07
       }
     },
     {
-      "file": "1646476113957.jpg",
+      "file": "1646601844113.jpg",
       "n_a": 1,
       "n_b": 1,
       "n_c": 1,
@@ -553,8 +553,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9999996336158103,
-        "mean_iou": 0.9999996336158103,
+        "min_iou": 0.9999998295210811,
+        "mean_iou": 0.9999998295210811,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -565,13 +565,13 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9917665125343629,
-        "mean_iou": 0.9917665125343629,
-        "max_conf_delta": 0.0020807981491088867
+        "min_iou": 0.9999995981912827,
+        "mean_iou": 0.9999995981912827,
+        "max_conf_delta": 5.960464477539063e-08
       }
     },
     {
-      "file": "1646476113971.jpg",
+      "file": "1646601844147.jpg",
       "n_a": 1,
       "n_b": 1,
       "n_c": 1,
@@ -583,8 +583,8 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9999991016766401,
-        "mean_iou": 0.9999991016766401,
+        "min_iou": 0.9999996376975323,
+        "mean_iou": 0.9999996376975323,
         "max_conf_delta": 0.0
       },
       "ab": {
@@ -595,9 +595,9 @@
         "matched": 1,
         "unmatched_a": 0,
         "unmatched_b": 0,
-        "min_iou": 0.9838361011597068,
-        "mean_iou": 0.9838361011597068,
-        "max_conf_delta": 0.0029447078704833984
+        "min_iou": 0.9999990539792267,
+        "mean_iou": 0.9999990539792267,
+        "max_conf_delta": 2.980232238769531e-07
       }
     }
   ]
